@@ -6,7 +6,7 @@ import QuillEditor from 'react-quill';
 import 'react-quill/dist/quill.snow.css';
 import { Button } from '../ui/button';
 
-const ContentForm = ({ setIsOpen, blog, isEdit = false }) => {
+const BlogForm = ({ setIsOpen, blog, isEdit = false }) => {
   const [title, setTitle] = React.useState('');
   const inputRef = React.useRef(null);
   const [imageFile, setImageFile] = React.useState(null);
@@ -195,4 +195,4 @@ const ContentForm = ({ setIsOpen, blog, isEdit = false }) => {
   );
 };
 
-export default ContentForm;
+export default BlogForm;

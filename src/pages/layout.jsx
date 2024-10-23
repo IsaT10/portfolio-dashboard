@@ -3,7 +3,8 @@ import { SidebarNav } from '@/components/sidebar-nav';
 
 const sidebarNavItems = [
   { title: 'Blogs', to: '/' },
-  { title: 'Project', to: '/projects' },
+  { title: 'Projects', to: '/projects' },
+  { title: 'Skills', to: '/skills' },
 ];
 
 export default function Layout({ children, container }) {

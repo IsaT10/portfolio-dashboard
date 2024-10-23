@@ -1,11 +1,10 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
 import { Dialog, DialogContent, DialogTrigger } from '../ui/dialog';
-
 import { Button } from '../ui/button';
-import BlogForm from './blog-form';
+import ProjectForm from './project-form';
 
-export function EditBlogModal({ blog }) {
+export function UpdateProjectModal({ project }) {
   const [isOpen, setIsOpen] = React.useState(false);
   return (
     <Dialog open={isOpen} onOpenChange={(open) => setIsOpen(open)}>
@@ -17,8 +16,8 @@ export function EditBlogModal({ blog }) {
           Edit
         </Button>
       </DialogTrigger>
-      <DialogContent className='md:max-w-[700px] rounded-md max-w-[90%]  max-h-[90vh] overflow-y-auto'>
-        <BlogForm blog={blog} isEdit={true} setIsOpen={setIsOpen} />
+      <DialogContent className='md:max-w-[800px] rounded-md   max-h-[90vh] overflow-y-auto'>
+        <ProjectForm project={project} isUpdate={true} setIsOpen={setIsOpen} />
       </DialogContent>
     </Dialog>
   );

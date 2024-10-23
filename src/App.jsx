@@ -6,6 +6,7 @@ import { AuthContext } from './provider/AuthProvider';
 import { Toaster } from 'sonner';
 import Projects from './pages/projects';
 import Blogs from './pages/blogs';
+import Skills from './pages/skills';
 
 function App() {
   const { user } = useContext(AuthContext);
@@ -43,6 +44,14 @@ function App() {
             element={
               <Layout container>
                 <Projects />
+              </Layout>
+            }
+          />
+          <Route
+            path='/skills'
+            element={
+              <Layout container>
+                <Skills />
               </Layout>
             }
           />

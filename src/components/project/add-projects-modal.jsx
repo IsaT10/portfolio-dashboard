@@ -1,9 +1,9 @@
 import React from 'react';
 import { Dialog, DialogContent, DialogTrigger } from '../ui/dialog';
 import { PencilLine } from 'lucide-react';
-import BlogForm from './blog-form';
+import ProjectForm from './project-form';
 
-export function WriteBlogModal() {
+export function AddProjectModal() {
   const [isOpen, setIsOpen] = React.useState(false);
 
   return (
@@ -11,18 +11,18 @@ export function WriteBlogModal() {
       <DialogTrigger asChild>
         <button className='flex relative group items-center space-x-2 px-14 py-2 border border-primary rounded-md'>
           <span className='group-hover:text-primary text-lg font-medium'>
-            Write new blog
+            Add new project
           </span>
           <span className='absolute left-2'>
             <PencilLine strokeWidth={1.5} size={20} />
           </span>
         </button>
       </DialogTrigger>
-      <DialogContent className='md:max-w-[700px] rounded-md max-w-[90%]  max-h-[90vh] overflow-y-auto '>
+      <DialogContent className='md:max-w-[800px] rounded-md  max-h-[90vh] overflow-y-auto '>
         {/* <DialogHeader>
           <DialogTitle>Write blog</DialogTitle>
         </DialogHeader> */}
-        <BlogForm setIsOpen={setIsOpen} />
+        <ProjectForm setIsOpen={setIsOpen} />
       </DialogContent>
     </Dialog>
   );
