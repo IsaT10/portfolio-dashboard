@@ -16,8 +16,6 @@ const ContentForm = ({ setIsOpen, blog, isEdit = false }) => {
 
   const { content, thumbnail, title: blogTitle, _id: blogId } = blog || {};
 
-  console.log({ blogTitle, isEdit });
-
   React.useEffect(() => {
     if (isEdit) {
       setValue(content);
@@ -110,7 +108,7 @@ const ContentForm = ({ setIsOpen, blog, isEdit = false }) => {
   ];
 
   return (
-    <div className=''>
+    <div>
       <div className='extraOutline border-primary border-[3px] border-dashed w-full h-[383px] mb-6 row-span-2 mx-auto rounded-lg'>
         <div
           onClick={handleImage}
